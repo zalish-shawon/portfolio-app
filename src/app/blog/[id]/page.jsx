@@ -15,7 +15,6 @@ async function getData(id) {
   return res.json();
 }
 
-
 export async function generateMetadata({ params }) {
 
   const post = await getData(params.id)
@@ -38,7 +37,7 @@ const BlogPost = async ({ params }) => {
           <div className={styles.author}>
             <Image
               src={"https://images.pexels.com/photos/5155309/pexels-photo-5155309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
-              alt=""
+              alt="blog image"
               width={40}
               height={40}
               className={styles.avatar}
