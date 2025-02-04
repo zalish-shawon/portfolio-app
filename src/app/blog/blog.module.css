@@ -20,3 +20,15 @@
     font-size: 18px;
     color: #999;
   }
+
+  .badge {
+    color: white;
+    background-color: palevioletred;
+    border-radius: 35px;
+    padding: 5px;
+    text-align: center;
+    width: 120px;
+    font-size: 12px;
+    margin-top: 20px;
+
+  }

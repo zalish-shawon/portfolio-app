@@ -3,13 +3,14 @@ import styles from "./blog.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-
+  const data = await fetch('https://api.vercel.app/blog')
+  const posts = await data.json()
 
 const Blog = async () => {
-  const data = await getData();
+
   return (
     <div className={styles.mainContainer}>
-      {data.map((item) => (
+      {posts.map((item) => (
         <Link href={`/blog/${item._id}`} className={styles.container} key={item.id}>
           <div className={styles.imageContainer}>
             <Image
@@ -22,7 +23,10 @@ const Blog = async () => {
           </div>
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>
-            <p className={styles.desc}>{item.desc}</p>
+            <p className={styles.desc}>{item.content}</p>
+            <div className={styles.badge}>
+            <p>{item.category}</p>
+            </div>
           </div>
         </Link>
       ))}
@@ -30,4 +34,4 @@ const Blog = async () => {
   );
 };
 
-export default Blog;
+export default Blog
