@@ -28,7 +28,9 @@ const Blog = async () => {
             <p>{item.category}</p>
             </div>
           </div>
+
         </Link>
+        
       ))}
     </div>
   );
