@@ -46,6 +46,7 @@ const BlogPost = async ({ params }) => {
             />
             <span className={styles.username}>{data.username}</span>
           </div>
+          
         </div>
         <div className={styles.imageContainer}>
           <Image
