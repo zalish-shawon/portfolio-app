@@ -5,6 +5,11 @@ import useSWR from 'swr';
 
 const Dashboard = () => {
 
+    const user : {name: String, email: String} = {
+        name: 'John Doe',
+        email: 'john@example'
+    }
+
     //old fetching style
 
 
@@ -39,6 +44,8 @@ console.log(data);
     return (
         <div className={styles.container}> 
             Dashboard
+            <p>Here is my porfolio app </p>
+            
         </div>
     );
 };
